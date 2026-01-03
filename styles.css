@@ -20,3 +20,11 @@
  .menu{
   display: flex;
  }
+ .menu li a{
+ text-decoration: none;
+ color: white; 
+ }
+ .menu li{
+  list-style: none;
+  margin: 5px;
+ }
