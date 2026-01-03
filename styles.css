@@ -1,8 +1,16 @@
- .header{
-            background-color: aquamarine;
-            color: brown;
-        }
-        .footer{
-            background-color: silver;
-            color: blue;
-        }
+ .header {
+     background-color: teal;
+     color: white;
+ }
+
+ .footer {
+     background-color: silver;
+ }
+
+ .container{
+    margin: 0px;
+ }
+
+ *{
+   margin: 0px; 
+ }
