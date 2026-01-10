@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Sanjana</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">Portfolio</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <button onclick="toggleDark()" id="theme-toggle">🌙</button>
+  </nav>
+</header>
+
+<section class="hero animate-fade-up">
+  <div class="hero-image-container">
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80" alt="Sanjana's Profile" class="hero-profile-img">
+  </div>
+  <h2>Hello, I'm <span>Sanjana</span></h2>
+  <p>Aspiring Software Developer</p>
+</section>
+
+<section id="about" class="section animate-fade-in">
+  <h3>About Me</h3>
+  <div class="about-content">
+    <p>
+      Passionate about building impactful and user-friendly web applications. As a fresher in software development, I am constantly learning and exploring new technologies to solve real-world problems through code.
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="section animate-slide-in">
+  <h3>Skills</h3>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Python</span>
+    <span>React</span>
+    <span>Node.js</span>
+    <span>SQL</span>
+    <span>Git</span>
+  </div>
+</section>
+
+<section id="projects" class="section animate-fade-up">
+  <h3>Projects</h3>
+  <div class="projects">
+    <div class="card">
+      <div class="project-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="Portfolio Project" class="project-img">
+      </div>
+      <div class="card-content">
+        <h4>Portfolio Website</h4>
+        <p>A personal portfolio showcasing skills and projects with a modern peach theme.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="project-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80" alt="Student Management" class="project-img">
+      </div>
+      <div class="card-content">
+        <h4>Student Management System</h4>
+        <p>A web-based application to manage student records and academic performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Sanjana
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
