@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>WEB APP 1</h1>
     <div>
-       <p ><input type ="text"></p>
+        <h1>LOGIN FORM</h1>
+        <p><label id="lblMessage"></label></p>
+       <p ><input type ="text" id="txtEmail"></p>
        <p><input type="password"></p>
-       <p><button>LOGIN</button></p>
+       <p><button class="login-btn" onclick="dispMessage()">LOGIN</button></p>
        <hr>
-       <p><button>CREATE ACCOUNT</button></p>
+       <p><button class="register-btn">CREATE ACCOUNT</button></p>
     </div>
 </body>
 </html>
