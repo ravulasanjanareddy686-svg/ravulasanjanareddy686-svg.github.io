@@ -1,35 +1,50 @@
-function dispMessage(){
-    // a=10;
-    // b=20;
-    // c=a+b
-    // alert(document.getElementById("txtEmail").value)
-    // lblMessage.innerHTML= document.getElementById("txtEmail").value
-    // lblMessage.innerHTML = document.getElementById("txtEmail").value + "-" document.getElementById("pass").value
-    let email=document.getElementById("txtEmail").value 
-    let p=document.getElementById("pass").value
-    if(email==="john@gmail.com" && p==="1234"){
-        lblMessage.innerHTML="welcome";
-    }
-    else{
-        lblMessage.innerHTML="access denied";
-    }
-    
+const users = [];
+function dispMessage() {
+  let email = document.getElementById("txtEmail").value;
+  let password = document.getElementById("txtPassword").value;
+  let found = users.find(
+    (element) => element.email === email && element.password === password
+  );
+  if (found) {
+    lblMessage.innerHTML = "Welcome";
+  } else {
+    lblMessage.innerHTML = "Access Denied";
+  }
 }
-function showlogin(){
-    let str = `
-    <h1>LOGIN FORM</h1>
-        <p><label id="lblMessage"></label></p>
-       <p ><input type ="text" id="txtEmail"></p>
-       <p><input type="password" id="pass"></p>
-       <p><button class="login-btn" onclick="dispMessage()">LOGIN</button></p>
-       <hr>
-       <p><button class="register-btn" onclick="showRegistrationform()">CREATE ACCOUNT</button></p>
-    `
-    root.innerHTML = str
+function addUser() {
+  let name = document.getElementById("txtName").value;
+  let email = document.getElementById("txtEmail").value;
+  let password = document.getElementById("txtPassword").value;
+  let user = { name: name, email: email, password: password };
+  users.push(user);
+  showLoginForm();
+  console.log(users);
 }
-function showRegistrationform(){
-    let str=`
-    <h3>Registration form</h3>
-    `
-    root.innerHTML=str
+
+function showLoginForm() {
+  let str = `
+    <h3>Login Form</h3>
+      <p><label id="lblMessage"></label></p>
+      <p><input type="text" id="txtEmail" placeholder="Email Address" /></p>
+      <p><input type="password" id="txtPassword" placeholder="Password" /></p>
+      <p><button class="login-btn" onclick="dispMessage()">Log In</button></p>
+      <hr>
+      <p><button class="register-btn" onclick="showRegisterForm()">Create Account</button></p>
+    `;
+  root.innerHTML = str;
+}
+
+function showRegisterForm() {
+  let str = `
+     <h3>Registration Form</h3>
+     <p><label id="lblMessage"></label></p>
+     <p><input type="text" id="txtName" placeholder="Enter Name" /></p>
+      <p><input type="text" id="txtEmail" placeholder="Email Address" /></p>
+      <p><input type="password" id="txtPassword" placeholder="Password" /></p>
+      <p><button class="login-btn" onclick="addUser()">Submit</button></p>
+      <hr>
+      <p>Already a member?<a href="#" onclick="showLoginForm()">Login here</a></p>
+
+    `;
+  root.innerHTML = str;
 }
